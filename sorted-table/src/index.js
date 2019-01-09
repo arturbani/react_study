@@ -46,10 +46,38 @@ class Table extends React.Component {
         return 0;
       }
 
-      else if (column === 'name'){
-        const auxA = a.name.toUpperCase();
-        const auxB = b.name.toUpperCase();
+      else {
+        var auxA;
+        var auxB;
 
+        // Sets up the auxs correctly
+        if (column === 'name'){
+          auxA = a.name.toUpperCase();
+          auxB = b.name.toUpperCase();
+        }
+
+        if (column === 'address'){
+          auxA = a.address.toUpperCase();
+          auxB = b.address.toUpperCase();
+        }
+
+        if (column === 'city'){
+          auxA = a.city.toUpperCase();
+          auxB = b.city.toUpperCase();
+        }
+
+        if (column === 'region'){
+          auxA = a.region.toUpperCase();
+          auxB = b.region.toUpperCase();
+        }
+
+        if (column === 'country'){
+          auxA = a.country.toUpperCase();
+          auxB = b.country.toUpperCase();
+        }
+
+        // ==========================================================================================
+        
         if (auxA < auxB){
           return -1;
         }
@@ -61,72 +89,6 @@ class Table extends React.Component {
 
         return 0;
       }
-
-      else if (column === 'address'){
-        const auxA = a.address.toUpperCase();
-        const auxB = b.address.toUpperCase();
-
-        if (auxA < auxB){
-          return -1;
-        }
-
-
-        if (auxA > auxB){
-          return 1;
-        }
-
-        return 0;
-      }
-
-      else if (column === 'city'){
-        const auxA = a.city.toUpperCase();
-        const auxB = b.city.toUpperCase();
-
-        if (auxA < auxB){
-          return -1;
-        }
-
-
-        if (auxA > auxB){
-          return 1;
-        }
-
-        return 0;
-      }
-
-      else if (column === 'region'){
-        const auxA = a.region.toUpperCase();
-        const auxB = b.region.toUpperCase();
-
-        if (auxA < auxB){
-          return -1;
-        }
-
-
-        if (auxA > auxB){
-          return 1;
-        }
-
-        return 0;
-      }
-
-      else if (column === 'country'){
-        const auxA = a.country.toUpperCase();
-        const auxB = b.country.toUpperCase();
-
-        if (auxA < auxB){
-          return -1;
-        }
-
-
-        if (auxA > auxB){
-          return 1;
-        }
-
-        return 0;
-      }
-      
-
     });
 
     // So we can sort the columns both ways
