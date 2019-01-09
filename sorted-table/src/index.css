@@ -1,16 +1,29 @@
 table {
+  border-collapse: collapse;
+  table-layout: fixed;
   width: 100%;
-  border-color: rgb(191, 192, 192);
 }
 
 th {
-  font: 16px "Century Gothic", Futura, sans-serif;
+  font: 14px "Century Gothic", Futura, sans-serif;
   background-color: rgb(184, 228, 248);
   padding: 5px;
+  border-left: 1px solid rgb(192, 199, 204);
+  border-right: 1px solid rgb(192, 199, 204);
+}
+
+tr {
+  border-bottom: 1px solid rgb(192, 199, 204)
+}
+
+td {
+  width: 25% ;
+  font: 12px "Century Gothic", Futura, sans-serif;
+  border-left: 1px solid rgb(192, 199, 204);
+  border-right: 1px solid rgb(192, 199, 204);
 }
 
 #root {
   margin: auto;
-  width: 940px;
 
 }
