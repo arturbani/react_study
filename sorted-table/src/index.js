@@ -9,48 +9,160 @@ import customData from './data.json';
     https://www.thesitewizard.com/css/make-table-cells-same-size.shtml
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
     https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 */
 
 class Table extends React.Component {
-  state = {
-    data: customData,
-    sortDirection: 'down', 
-    activeColumn: null, 
+  constructor(props){
+    super(props);
+    this.state = {
+      data: customData,
+      sortSettings: {
+        order: '>',
+      }
+    }
+
+    this.sortHandler = this.sortHandler.bind(this);
   }
 
-  // sortColumn(column){
-  //   if (column === 'name')
-  //   if (column === 'address')
-  //   if (column === 'city')
-  //   if (column === 'region')
-  //   if (column === 'country')
-  //   if (column === 'birthday')
+  sortHandler(column){
+    const order = this.state.sortSettings.order === '>' ? '<' : '>';
+    const sortedData = this.state.data.sort((a, b) => { 
+      if (column === 'birthday'){
+        
+        // Explanation: If compareFunction(a, b) is less than 0, sort a to an index lower than b (i.e. a comes first).
+        if (a.birthday < b.birthday){
+          return -1;
+        }
+
+        // Same logic here: If compareFunction(a, b) is greater than 0, sort b to an index lower than a (i.e. b comes first).
+        if (a.birthday > b.birthday){
+          return 1;
+        }
+
+        // If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, 
+        // but sorted with respect to all different elements. Dangerous, not all browsers guarantee this behaviour.
+        return 0;
+      }
+
+      else if (column === 'name'){
+        const auxA = a.name.toUpperCase();
+        const auxB = b.name.toUpperCase();
+
+        if (auxA < auxB){
+          return -1;
+        }
 
 
-  // }
+        if (auxA > auxB){
+          return 1;
+        }
+
+        return 0;
+      }
+
+      else if (column === 'address'){
+        const auxA = a.address.toUpperCase();
+        const auxB = b.address.toUpperCase();
+
+        if (auxA < auxB){
+          return -1;
+        }
+
+
+        if (auxA > auxB){
+          return 1;
+        }
+
+        return 0;
+      }
+
+      else if (column === 'city'){
+        const auxA = a.city.toUpperCase();
+        const auxB = b.city.toUpperCase();
+
+        if (auxA < auxB){
+          return -1;
+        }
+
+
+        if (auxA > auxB){
+          return 1;
+        }
+
+        return 0;
+      }
+
+      else if (column === 'region'){
+        const auxA = a.region.toUpperCase();
+        const auxB = b.region.toUpperCase();
+
+        if (auxA < auxB){
+          return -1;
+        }
+
+
+        if (auxA > auxB){
+          return 1;
+        }
+
+        return 0;
+      }
+
+      else if (column === 'country'){
+        const auxA = a.country.toUpperCase();
+        const auxB = b.country.toUpperCase();
+
+        if (auxA < auxB){
+          return -1;
+        }
+
+
+        if (auxA > auxB){
+          return 1;
+        }
+
+        return 0;
+      }
+      
+
+    });
+
+    // So we can sort the columns both ways
+    if (order === '>'){
+      sortedData.reverse();
+    }
+
+    this.setState({
+      data: sortedData,
+      sortSettings: {
+        order: order,
+      }
+    });
+  }
 
   render(){
     return(
       <table>
         <thead>
           <tr>
-            <th>
+            <th onClick={() => {this.sortHandler('name')}}>
               Name
             </th>
-            <th>
+            <th onClick={() => {this.sortHandler('address')}}>
               Address
             </th>
-            <th>
+            <th onClick={() => {this.sortHandler('city')}}>
               City
             </th>
-            <th>
+            <th onClick={() => {this.sortHandler('region')}}>
               Region
             </th>
-            <th>
+            <th onClick={() => {this.sortHandler('country')}}>
               Country
             </th>
-            <th>
+            <th onClick={() => {this.sortHandler('birthday')}}>
               Birthday
             </th>
           </tr>
@@ -58,7 +170,7 @@ class Table extends React.Component {
         <tbody>
           {this.state.data.map((data) => {
               return (
-                <tr>
+                <tr key={data.name}>
                   <td>{data.name}</td>
                   <td>{data.address}</td>
                   <td>{data.city}</td>
