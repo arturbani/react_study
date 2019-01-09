@@ -27,7 +27,7 @@ class Table extends React.Component {
   sortHandler(column){
     const order = this.state.sortSettings.order === '>' ? '<' : '>';
     const sortedData = this.state.data.sort((a, b) => { 
-      // DOBs are treated different because they don't need the toUpperCase() function, probably it would work the same though
+      // DOBs are treated differently because they don't need the toUpperCase() function, probably it would work the same though
       if (column === 'birthday'){
         
         // Explanation: If compareFunction(a, b) is less than 0, sort a to an index lower than b (i.e. a comes first).
