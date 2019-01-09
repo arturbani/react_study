@@ -108,22 +108,22 @@ class Table extends React.Component {
       <table>
         <thead>
           <tr>
-            <th onClick={() => {this.sortHandler('name')}}>
+            <th class='sorted-th' onClick={() => {this.sortHandler('name')}}>
               Name
             </th>
-            <th onClick={() => {this.sortHandler('address')}}>
+            <th class='sorted-th' onClick={() => {this.sortHandler('address')}}>
               Address
             </th>
-            <th onClick={() => {this.sortHandler('city')}}>
+            <th class='sorted-th' onClick={() => {this.sortHandler('city')}}>
               City
             </th>
-            <th onClick={() => {this.sortHandler('region')}}>
+            <th class='sorted-th' onClick={() => {this.sortHandler('region')}}>
               Region
             </th>
-            <th onClick={() => {this.sortHandler('country')}}>
+            <th class='sorted-th' onClick={() => {this.sortHandler('country')}}>
               Country
             </th>
-            <th onClick={() => {this.sortHandler('birthday')}}>
+            <th class='sorted-th' onClick={() => {this.sortHandler('birthday')}}>
               Birthday
             </th>
           </tr>
@@ -131,13 +131,13 @@ class Table extends React.Component {
         <tbody>
           {this.state.data.map((data) => {
               return (
-                <tr key={data.name}>
-                  <td>{data.name}</td>
-                  <td>{data.address}</td>
-                  <td>{data.city}</td>
-                  <td>{data.region}</td>
-                  <td>{data.country}</td>
-                  <td>{data.birthday}</td>
+                <tr class='sorted-tr' key={data.name}>
+                  <td class='sorted-td'>{data.name}</td>
+                  <td class='sorted-td'>{data.address}</td>
+                  <td class='sorted-td'>{data.city}</td>
+                  <td class='sorted-td'>{data.region}</td>
+                  <td class='sorted-td'>{data.country}</td>
+                  <td class='sorted-td'>{data.birthday}</td>
                 </tr>
               );
           })}

@@ -4,7 +4,7 @@ table {
   width: 100%;
 }
 
-th {
+.sorted-th {
   font: 14px "Century Gothic", Futura, sans-serif;
   background-color: rgb(184, 228, 248);
   padding: 5px;
@@ -12,15 +12,15 @@ th {
   border-right: 1px solid rgb(192, 199, 204);
 }
 
-th:hover{
+.sorted-th:hover{
   background-color: rgb(136, 205, 236);
 }
 
-tr {
+.sorted-tr {
   border-bottom: 1px solid rgb(192, 199, 204)
 }
 
-td {
+.sorted-td {
   width: 25% ;
   font: 12px "Century Gothic", Futura, sans-serif;
   border-left: 1px solid rgb(192, 199, 204);
