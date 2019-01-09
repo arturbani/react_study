@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+  border-color: rgb(191, 192, 192);
+}
+
+th {
+  font: 16px "Century Gothic", Futura, sans-serif;
+  background-color: rgb(184, 228, 248);
+  padding: 5px;
+}
+
+#root {
+  margin: auto;
+  width: 940px;
+
+}
