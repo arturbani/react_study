@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SortedTable from './components/sorted-table/'
+import App from './App.js'
 import './css/index.css';
 
 /* 
@@ -14,6 +14,6 @@ import './css/index.css';
 */
 
 ReactDOM.render(
-  <SortedTable />,
+  <App />,
   document.getElementById('root')
 );
