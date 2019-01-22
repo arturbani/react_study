@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App.js'
 import './css/index.css';
 
-/* 
+/*
 
   References used:
     https://www.thesitewizard.com/css/make-table-cells-same-size.shtml
@@ -15,5 +15,5 @@ import './css/index.css';
 
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
+  document.querySelector('#root')
 );
