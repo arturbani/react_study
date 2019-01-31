@@ -1,3 +1,16 @@
 {
-  "streams": []
+  "streams": [
+    {
+      "title": "Red Dead Redemption 2 - Free Roam!",
+      "description": "Come watch and talk!",
+      "userId": "109551976165174264774",
+      "id": 1
+    },
+    {
+      "title": "Resident Evil 2 - Gameplay",
+      "description": "SCARY SHIIEET",
+      "userId": "109551976165174264774",
+      "id": 2
+    }
+  ]
 }
