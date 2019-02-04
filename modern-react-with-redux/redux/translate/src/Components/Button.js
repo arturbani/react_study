@@ -16,7 +16,7 @@ class Button extends React.Component {
         </LanguageContext.Consumer>
       </button>
     );
-  }
+  } 
 
   render() {
     return (
