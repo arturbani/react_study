@@ -1,8 +1,10 @@
 import React from "react";
-import { Text, AppRegistry } from "react-native";
+import { AppRegistry } from "react-native";
 
-const App = () => {
-  return <Text>Some Text</Text>;
+import Header from "./src/Components/Header";
+
+const App = props => {
+  return <Header headerText="Albuns" />;
 };
 
 AppRegistry.registerComponent("albums", () => App);
