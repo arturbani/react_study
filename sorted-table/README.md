@@ -15,4 +15,5 @@ Then open [http://localhost:3000](http://localhost:3000) to view it in the brows
 
 #### You can also test it by clicking [here](https://sorted-table.netlify.com/)
 
-
+---
+feito com 💙por artur bani.
