@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 23,
+      "firstName": "Jorge Ben",
+      "age": 77,
+      "companyId": "1"
+    },
+    {
+      "id": 40,
+      "firstName": "Milton Nascimento",
+      "age": 77,
+      "companyId": "2"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Tropicália",
+      "description": "Tropicália, tropicalismo ou movimento tropicalista foi um movimento cultural brasileiro que surgiu sob a influência das correntes artísticas da vanguarda e da cultura pop nacional e estrangeira."
+    },
+    {
+      "id": "2",
+      "name": "Clube da Esquina",
+      "description": "O Clube da Esquina foi um movimento musical brasileiro surgido na década de 1960 em Belo Horizonte - Minas Gerais."
+    }
+  ]
+}
